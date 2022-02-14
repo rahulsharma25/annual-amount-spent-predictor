@@ -30,4 +30,4 @@ def submit():
     return render_template("index.html", prediction=f'The predicted annual amount spent by the customer is Rs {prediction}')
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
