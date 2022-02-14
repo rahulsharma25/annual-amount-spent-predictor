@@ -26,6 +26,8 @@ def submit():
     X = np.reshape(X, (1,len(X)))
     prediction = predict(X)[0]
     prediction = round(prediction, 2)
+    if prediction < 0:
+        prediction = 0
 
     return render_template("index.html", prediction=f'The predicted annual amount spent by the customer is Rs {prediction}')
 
